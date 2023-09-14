@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Define the SSM parameter names
 PARAMETER_NAME="random-sikh-facts-env"
 DB_PARAMETER_NAME="random-sikh-facts-env-db"
@@ -11,8 +13,9 @@ IFS=',' read -ra VALUES <<< "$PARAMETER_VALUE"
 IFS=',' read -ra DB_VALUES <<< "$DB_PARAMETER_VALUE"
 
 # Create environment files
-ENV_FILE=".env"
-DB_ENV_FILE=".env.db"
+mkdir /home/ubuntu/random_sikh_facts/env
+ENV_FILE="/home/ubuntu/random_sikh_facts/env/.env.prod"
+DB_ENV_FILE="/home/ubuntu/random_sikh_facts/env/.env.prod.db"
 
 # Loop through the values and append them to the environment files
 for value in "${VALUES[@]}"; do
