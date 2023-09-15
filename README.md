@@ -1,5 +1,5 @@
 # random_sikh_facts
-This is an private API built in Django using the django-drf package that provides one random fact a day related to Sikhism, the fifth-largest religion in the world. 
+This is an API built in Django using the django-drf package that provides one random fact a day related to Sikhism, the fifth-largest religion in the world. 
 
 ## Usage and Deployment
 This repo utilises docker and docker-compose to make it work across all platforms. However, appspec files are also included for Continous Deployment of the Webapp to AWS via CodeDeploy. 
